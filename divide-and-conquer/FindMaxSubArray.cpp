@@ -53,11 +53,6 @@ std::tuple<int, int, int> findMaxCrossingSubArray(const std::vector<int> & array
             rightBorder = i;
         }
     }
-    if (leftSum == INT_MIN) {
-        return std::make_tuple(leftBorder, rightBorder, rightSum);
-    }
-    if (rightSum == INT_MIN) {
-        return std::make_tuple(leftBorder, rightBorder, leftSum);
-    }
+
     return std::make_tuple(leftBorder, rightBorder, leftSum + rightSum);
 }
